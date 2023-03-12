@@ -2,9 +2,10 @@ import React from "react"
 import Header from "./Header"
 import Footer from "./Footer"
 import Notes from "./Notes"
+import notes from "../notes.js"
 
 function APP(){
-    return (<div><Header /><Notes /><Footer /></div>)
+    return (<div><Header />{notes.map(note=>(<Notes key={note.key} title={note.title} content={note.content} />))}<Footer /></div>)
 }
 
 export default APP
