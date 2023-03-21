@@ -17,7 +17,6 @@ function CreateArea(props) {
   }
   function handleSubmit(event) {
     event.preventDefault();
-    setInputText({ title: "", content: "" });
   }
   function handleClick(){
     setClick(true)
@@ -40,7 +39,7 @@ function CreateArea(props) {
           rows={isClick?3:1}
         />
         <Zoom in={isClick}>
-          <Fab onClick={() => props.onClicked(inputText)}>
+          <Fab onClick={() =>{setInputText({ title: "", content: "" });props.onClicked(inputText)} }>
             <AddIcon />
           </Fab>
         </Zoom>
